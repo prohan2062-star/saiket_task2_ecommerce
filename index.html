@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VOGUE — Modern Fashion</title>
+
+    <meta name="description" content="Discover timeless fashion and premium everyday clothing at VOGUE.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement">
+        FREE SHIPPING ON ORDERS ABOVE ₹1,999
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <a href="#" class="logo">VOGUE<span>.</span></a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#details">Details</a>
+                <a href="#footer">About</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="cart-button" id="cartButton" aria-label="Open shopping cart">
+                    <span class="cart-icon">Bag</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#home">Home</a>
+            <span>/</span>
+            <a href="#shop">Women</a>
+            <span>/</span>
+            <span>Clothing</span>
+        </div>
+
+        <!-- Product Section -->
+        <section class="product-section" id="shop">
+
+            <!-- Product Gallery -->
+            <div class="gallery">
+
+                <div class="thumbnail-list">
+                    <button class="thumbnail active" data-image="0">
+                        <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=300" alt="Front view">
+                    </button>
+
+                    <button class="thumbnail" data-image="1">
+                        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=300" alt="Fashion look">
+                    </button>
+
+                    <button class="thumbnail" data-image="2">
+                        <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=300" alt="Style detail">
+                    </button>
+
+                    <button class="thumbnail" data-image="3">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300" alt="Model look">
+                    </button>
+                </div>
+
+                <div class="main-image-wrap">
+                    <span class="image-label">BESTSELLER</span>
+
+                    <img id="mainImage" class="main-image" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=1000" alt="Premium women's fashion outfit">
+                </div>
+
+            </div>
+
+            <!-- Product Information -->
+            <div class="product-info">
+
+                <div class="product-category">VOGUE ESSENTIALS / WOMEN</div>
+
+                <h1>Classic Everyday<br>Statement Dress</h1>
+
+                <div class="rating">
+                    <span class="stars">★★★★★</span>
+                    <span>4.8</span>
+                    <span class="review-count">(124 reviews)</span>
+                </div>
+
+                <div class="price-row">
+                    <span class="current-price">₹2,499</span>
+                    <span class="old-price">₹3,499</span>
+                    <span class="discount">29% OFF</span>
+                </div>
+
+                <p class="tax-note">Inclusive of all taxes. Free shipping on eligible orders.</p>
+
+                <div class="product-description">
+                    A timeless statement piece designed for effortless style. Crafted with premium fabric and a comfortable fit, perfect for everyday elegance and special occasions.
+                </div>
+
+                <div class="option-section">
+                    <div class="option-heading">
+                        <span>Color</span>
+                        <span id="selectedColor">Classic Black</span>
+                    </div>
+
+                    <div class="color-options">
+                        <button class="color-option black active" data-color="Classic Black" aria-label="Black"></button>
+                        <button class="color-option beige" data-color="Soft Beige" aria-label="Beige"></button>
+                        <button class="color-option brown" data-color="Earth Brown" aria-label="Brown"></button>
+                    </div>
+                </div>
+
+                <div class="option-section">
+                    <div class="option-heading">
+                        <span>Select Size</span>
+                        <button class="size-guide" id="sizeGuide">Size Guide</button>
+                    </div>
+
+                    <div class="size-options">
+                        <button class="size-option" data-size="XS">XS</button>
+                        <button class="size-option" data-size="S">S</button>
+                        <button class="size-option active" data-size="M">M</button>
+                        <button class="size-option" data-size="L">L</button>
+                        <button class="size-option" data-size="XL">XL</button>
+                    </div>
+
+                    <p class="selection-message" id="sizeMessage">Selected size: M</p>
+                </div>
+
+                <div class="option-section">
+                    <div class="option-heading">
+                        <span>Quantity</span>
+                    </div>
+
+                    <div class="quantity-control">
+                        <button id="decreaseQty" aria-label="Decrease quantity">−</button>
+                        <span id="quantity">1</span>
+                        <button id="increaseQty" aria-label="Increase quantity">+</button>
+                    </div>
+                </div>
+
+                <button class="add-to-cart" id="addToCart">
+                    ADD TO BAG — ₹2,499
+                </button>
+
+                <button class="wishlist-button" id="wishlistButton">
+                    ♡ &nbsp; ADD TO WISHLIST
+                </button>
+
+                <div class="delivery-info">
+                    <div class="delivery-item">
+                        <span class="delivery-icon">↗</span>
+                        <div>
+                            <strong>Free Delivery</strong>
+                            <p>On orders above ₹1,999</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-item">
+                        <span class="delivery-icon">↺</span>
+                        <div>
+                            <strong>Easy Returns</strong>
+                            <p>7-day return policy</p>
+                        </div>
+                    </div>
+
+                    <div class="delivery-item">
+                        <span class="delivery-icon">✓</span>
+                        <div>
+                            <strong>Secure Checkout</strong>
+                            <p>Safe and secure shopping</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Product Details -->
+        <section class="details-section" id="details">
+
+            <div class="section-heading">
+                <p>THE VOGUE EXPERIENCE</p>
+                <h2>Made for your everyday style.</h2>
+            </div>
+
+            <div class="details-grid">
+
+                <div class="detail-card">
+                    <span>01</span>
+                    <h3>Premium Fabric</h3>
+                    <p>Comfortable, quality-focused fabric selected for everyday wear.</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>02</span>
+                    <h3>Timeless Design</h3>
+                    <p>A versatile silhouette that makes styling simple and effortless.</p>
+                </div>
+
+                <div class="detail-card">
+                    <span>03</span>
+                    <h3>Perfect Fit</h3>
+                    <p>Thoughtfully designed for comfort, confidence and movement.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Related Products -->
+        <section class="related-section">
+
+            <div class="related-heading">
+                <div>
+                    <p>CURATED FOR YOU</p>
+                    <h2>You may also like</h2>
+                </div>
+                <a href="#shop">Explore Collection ↗</a>
+            </div>
+
+            <div class="related-grid">
+
+                <article class="related-card">
+                    <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=600" alt="Fashion outfit">
+                    <h3>Everyday Minimal Outfit</h3>
+                    <p>₹1,899</p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=600" alt="Casual fashion">
+                    <h3>Modern Casual Collection</h3>
+                    <p>₹2,199</p>
+                </article>
+
+                <article class="related-card">
+                    <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=600" alt="Elegant fashion">
+                    <h3>Elegant Street Style</h3>
+                    <p>₹2,799</p>
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div>
+                <a href="#" class="logo footer-logo">VOGUE<span>.</span></a>
+                <p>Modern fashion. Timeless confidence.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#shop">Shop</a>
+                <a href="#details">Our Story</a>
+                <a href="mailto:hello@vogue.example">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> VOGUE. All rights reserved.</p>
+            <p>Designed with style.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <!-- Size Guide Modal -->
+    <div class="modal" id="sizeModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="Close">×</button>
+            <h2>Size Guide</h2>
+            <p>Approximate body measurements in inches.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Bust</th>
+                        <th>Waist</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>XS</td>
+                        <td>32</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>S</td>
+                        <td>34</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>36</td>
+                        <td>30</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>38</td>
+                        <td>32</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>40</td>
+                        <td>34</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
